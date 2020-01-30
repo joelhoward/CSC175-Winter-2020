@@ -1,0 +1,87 @@
+// menu prompt
+                cout << "Please pick an option:\n\n"
+                     << "1 - Add a documentation block.\n"
+                     << "2 - Include a Library.\n"
+                     << "3 - Add a main function.\n"
+                     << "4 - Write our file to disk\n"
+                     << "0 - Exit Application\n\n"
+                     << "Option: ";
+
+                cin >> charOption;
+                cout << "\n\n\n\n\n\n\n\n\n\n\n\n";
+
+// doc block generator
+                        // user inputted variables to generate doc block
+                        string strFirstName = "";
+                        string strLastName = "";
+                        string strAssignmentNum = "";
+                        string strDueDate = "";
+                        string strClass = "";
+
+                        cout << "\nEnter your first name: ";
+                        cin >> strFirstName;
+
+                        cout << "\nEnter your last name: ";
+                        cin >> strLastName;
+
+                        cout << "\nEnter your class: ";
+                        cin >> strClass;
+
+                        cout << "\nEnter your asignment number: ";
+                        cin >> strAssignmentNum;
+
+                        cout << "\nEnter the due date: ";
+                        cin >> strDueDate;
+
+                        strDocBlock = "";
+
+                        strDocBlock =
+                                "/*'*'*'*'*'*'*'*'*'*'*'*'*'*'*'*'*'*'*'*'*'*'*'*'*'*'*'*'*'*'*'*'*'*'*'*'/"
+                                "\n*"
+                                "\n*\tName:\t\t" + strFirstName + " " + strLastName +
+                                "\n*\tClass:\t\t" + strClass +
+                                "\n*\tProject: Assignment #" + strAssignmentNum +
+                                "\n*\tDue Date:\t" + strDueDate +
+                                "\n*"
+                                "\n/'*'*'*'*'*'*'*'*'*'*'*'*'*'*'*'*'*'*'*'*'*'*'*'*'*'*'*'*'*'*'*'*'*'*'*'*/\n\n";
+
+                        cout << "***Documentation block added!***\n\n";
+
+
+// library inserts
+                        // reset our header variable
+                        strHeader = "";
+
+                        // we are going to offer iostream, file, and string libraries
+                        cout << "\nWould you like to include the IO Stream library?(y or n) ";
+                        cin >> charOption;
+
+                        if (charOption == 'y') {
+                                strHeader += "#include <iostream>\n";
+                        }
+
+                        cout << "\nWould you like to include the File Stream library?(y or n) ";
+                        cin >> charOption;
+
+                        if (charOption == 'y') {
+                                strHeader += "#include <fstream>\n";
+                        }
+
+
+                        cout << "\nWould you like to include the String Library?(y or n) ";
+                        cin >> charOption;
+
+                        if (charOption == 'y') {
+                                strHeader += "#include <string>\n";
+                        }
+
+                        cout << "\nWould you like to include the std namespace?(y or n): ";
+                        cin >> charOption;
+
+                        if(charOption == 'y') {
+                                strHeader += "\nusing namespace std;";
+                        }
+
+                        cout << "***Selected libraries added!***\n\n";
+
+                        break;
