@@ -75,6 +75,43 @@ int main(void)
         	}
         	case '2': {
         		// include our libraries in our header
+                // reset our header variable
+                strHeader = "";
+
+                // we are going to offer iostream, file, and string libraries
+                cout << "\nWould you like to include the IO Stream library?(y or n) ";
+                cin >> charOption;
+
+                if (charOption == 'y') {
+                        strHeader += "#include <iostream>\n";
+                        strHeader = strHeader + "#include <iostream>\n";
+                }
+
+                cout << "\nWould you like to include the File Stream library?(y or n) ";
+                cin >> charOption;
+
+                if (charOption == 'y') {
+                        strHeader += "#include <fstream>\n";
+                }
+
+
+                cout << "\nWould you like to include the String Library?(y or n) ";
+                cin >> charOption;
+
+                if (charOption == 'y') {
+                        strHeader += "#include <string>\n";
+                }
+
+                cout << "\nWould you like to include the std namespace?(y or n): ";
+                cin >> charOption;
+
+                if(charOption == 'y') {
+                        strHeader += "\nusing namespace std;";
+                }
+
+                cout << "***Selected libraries added!***\n\n";
+
+                break;
 
         		break;
         	}
