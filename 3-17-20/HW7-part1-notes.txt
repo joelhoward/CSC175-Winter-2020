@@ -1,0 +1,11 @@
+// to determine the lowest score
+intIndexLowest
+intIndexHighest
+
+iterate thru your array of scores and find the lowest LOCATION
+iterate thru your array of scores and find the highest LOCATION
+
+// do your calcuation...
+double dblTotalScores
+loop thru array of scores... and on each iteration add the current value to dblTotalScores
+-- comparison inside the loop to see if the current value is our highest or lowest? if not, add to dblTotalScores
