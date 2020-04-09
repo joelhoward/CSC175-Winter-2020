@@ -1,0 +1,21 @@
+File Paths:
+
+	- Relative Path
+		- a relative path is "realative" to the current working directory(ie: the directory your application is running from)
+			/home/joelhowa/application.out - compiled application
+			- input file:
+				- input.txt - /home/joelhowa/input.txt
+					- relative path: "input.txt" - relative to our current working directory
+					- absolute path: "/home/joelhowa/input.txt" - full path on the file system
+				- output.txt - /var/log/application.log
+					- relative path: traverse out of directory with ".."
+						"../application.log" - write the file to: /home/application.log
+						"../../application.log" - write the file to: /application.log
+						"../../var/log/application.log" - write the file to: /var/log/application.log
+					- abosolute path:
+						"/var/log/application.log"
+	
+	Special characters for navigating a file system
+		- start with a "/" - this will always take you to to the root of the file system
+		- start WITHOUT a "/" - this will always be realative of the directory where you executed the application(current working directory)
+		- start with "../" - the ".." will allow you to traverse up a directory
